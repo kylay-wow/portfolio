@@ -1,0 +1,104 @@
+.root{
+    --bg: #F3F5F6;
+    --accent: #829BAA;
+    --text: #20272C;
+    --secondary: #34434D;
+}
+
+body{
+    font-family: 'Short Stack', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+
+.site-header{
+    justify-content: space-between;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar{
+    align-items: center;
+    display: flex;
+    width: fit-content;
+    gap: 15px;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    gap: 30px;
+}
+
+.intro{
+    flex: 2;
+}
+
+.intro h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.intro p{
+    line-height: 1.6rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.profile-pic{
+    flex: 1;
+}
+
+.abt-me{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 20px 30px; 
+}
+
+.abt-me h2{
+    flex: 1.5;
+}
+
+.abt-me p{
+    flex: 3.5;
+    max-width: 700px;
+}
+
+.skills{
+    display: flex;
+    gap: 40px;
+    
+}
+
+@media (max-width: 700px){
+    .nav-bar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .abt-me{
+        flex-direction: column;
+    }
+
+    .abt-me h2{
+        width: 100%;
+    }
+
+    .abt-me p{
+        width: 100%;
+    }
+}
