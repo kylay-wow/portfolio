@@ -3,74 +3,279 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kylie's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Kylie — Cybersecurity Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Short+Stack&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
     <header class="site-header">
-        <a class="name" href="index.html">K.G</a>
-        <nav class="nav-bar" aria-label="Main Navigation">
-            <a href="#abt-me">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
+        <a class="name" href="#home">K<span>.</span>G</a>
+
+        <nav class="nav-bar" aria-label="Main navigation">
+            <a href="#abt-me">ABOUT <span>01</span></a>
+            <a href="#skills">SKILLS <span>02</span></a>
+            <a href="#projects">PROJECTS <span>03</span></a>
         </nav>
+
+        <span class="header-status">
+            <span class="status-dot"></span>
+            PORTFOLIO / 2026
+        </span>
     </header>
+
     <main class="main">
-        <section class="hero">
-            <div class="intro">
-                <h1>Hi, I'm Kylie</h1>
-                <p>Cybersecurity & digital forensics student currently on exchange
-                    at Gachon University in South Korea.
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <p class="eyebrow">
+                    <span class="lime-line"></span>
+                    CYBERSECURITY & DIGITAL FORENSICS
                 </p>
+
+                <h1>
+                    NOT JUST<br>
+                    <span class="outline-text">CURIOUS.</span><br>
+                    <span class="lime-text">ALWAYS</span> 
+                    <span class="last-word">EXPLORING.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Hi, I'm Kylie — a cybersecurity and digital forensics
+                    student currently on exchange at Gachon University
+                    in South Korea.
+                </p>
+
+                <a href="#projects" class="hero-link">
+                    EXPLORE MY WORK
+                    <span>↗</span>
+                </a>
             </div>
-            
-            <div class="profile-pic">
-                <img src="profile pic.jpeg" alt="Portrait of Kylie" >
 
-            </div>
-        </section>
-
-        <section class="abt-me" id="abt-me">
-            <h2>About Me</h2>
-            <p>Curiosity is what first drew me to cybersecurity. I enjoy digging into how systems work, 
-                finding where they can be improved, and learning how to better protect them from potential threats. 
-                As a Cybersecurity and Digital Forensics student, I'm constantly building my skills through hands-on learning 
-                and exploring new ideas because there's always something new to discover in this field.
-            </p>
-
-        </section>
-
-        <section class="skills" id="skills">
-            <h2>Skills</h2>
-                <div class="skills-container">
-                    <div class="skills-category">
-                    <h3>Technical Skills</h3>
-                        <ul>
-                            <li>Python</li>
-                            <li>HTML5</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>SQLite3</li>
-                            <li>MongoDB</li>
-                        </ul>
-                    </div>
-
-                    <div class="skills-category">
-                        <h3>Soft Skills</h3>
-                        <ul>
-                            <li>Communication</li>
-                            <li>Teamwork</li>
-                            <li>Problem-solving</li>
-                            <li>Critical thinking</li>
-                        </ul>
-                    </div>
+            <div class="hero-visual">
+                <div class="image-label">
+                    <span>FIG. 001</span>
+                    <span>THE HUMAN BEHIND THE CODE</span>
                 </div>
 
+                <div class="image-frame">
+                    <img src="profile pic.jpeg" alt="Portrait of Kylie">
+                    <span class="image-number">KG—01</span>
+                </div>
+
+                <div class="vertical-label">
+                    BUILT ON CURIOSITY — EST. 2026
+                </div>
+            </div>
+
+            <div class="hero-bottom">
+                <span>SCROLL TO EXPLORE</span>
+                <span>01 / 04</span>
+            </div>
+
         </section>
+
+        <!-- ABOUT -->
+        <section class="abt-me" id="abt-me">
+
+            <div class="section-heading">
+                <span class="section-number">01 — ABOUT</span>
+                <h2>THE<br><span class="outline-text">WHY.</span></h2>
+            </div>
+
+            <div class="about-content">
+                <p class="about-lead">
+                    Curiosity is what first drew me to cybersecurity.
+                </p>
+
+                <p>
+                    I enjoy digging into how systems work, finding where
+                    they can be improved, and learning how to better
+                    protect them from potential threats. As a Cybersecurity
+                    and Digital Forensics student, I'm constantly building
+                    my skills through hands-on learning and exploring new
+                    ideas because there's always something new to discover
+                    in this field.
+                </p>
+
+                <span class="about-mark">THINK / EXPLORE / BUILD</span>
+            </div>
+
+        </section>
+
+        <!-- SKILLS -->
+        <section class="skills" id="skills">
+
+            <div class="section-title-row">
+                <div>
+                    <span class="section-number">02 — CAPABILITIES</span>
+                    <h2>WHAT I <span class="lime-text">BRING.</span></h2>
+                </div>
+
+                <span class="side-note">CURRENTLY LEARNING & BUILDING</span>
+            </div>
+
+            <div class="skills-container">
+
+                <div class="skills-category">
+                    <div class="skill-heading">
+                        <span>01</span>
+                        <h3>TECHNICAL</h3>
+                    </div>
+
+                    <ul>
+                        <li>Python</li>
+                        <li>HTML5</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>SQLite3</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+
+                <div class="skills-category">
+                    <div class="skill-heading">
+                        <span>02</span>
+                        <h3>PERSONAL</h3>
+                    </div>
+
+                    <ul>
+                        <li>Communication</li>
+                        <li>Teamwork</li>
+                        <li>Problem-solving</li>
+                        <li>Critical thinking</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="projects" id="projects">
+
+            <div class="section-title-row">
+                <div>
+                    <span class="section-number">03 — SELECTED WORK</span>
+                    <h2>IDEAS INTO <span class="lime-text">ACTION.</span></h2>
+                </div>
+
+                <span class="side-note">A COLLECTION OF PROJECTS & CONCEPTS</span>
+            </div>
+
+            <div class="proj-container">
+
+                <article class="proj-description">
+                    <div class="project-top">
+                        <span>PROJECT / 001</span>
+                        <span class="project-type">APPLICATION DEVELOPMENT</span>
+                    </div>
+
+                    <h3>SirApp<span class="project-arrow">↗</span></h3>
+
+                    <p>
+                        SirApp is a platform designed to encourage meaningful
+                        interactions between youths and the elderly through
+                        accessible community features. I contributed to
+                        developing the community-related functions, including
+                        creating and viewing communities, and handling user
+                        interactions to support a smooth user experience.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>PYTHON</span>
+                        <span>FLASK</span>
+                        <span>BOOTSTRAP</span>
+                        <span>SQLALCHEMY</span>
+                    </div>
+                </article>
+
+                <article class="proj-description">
+                    <div class="project-top">
+                        <span>PROJECT / 002</span>
+                        <span class="project-type">SUSTAINABILITY CONCEPT</span>
+                    </div>
+
+                    <h3>HydroLink Corridor<span class="project-arrow">↗</span></h3>
+
+                    <p>
+                        HydroLink Corridor is a sustainability concept
+                        developed for the CDL-GCNS Young SDG Leaders Award
+                        2026 as part of a four-member team. It proposes
+                        sheltered pedestrian corridors that integrate
+                        atmospheric water harvesting, greenery and
+                        solar-powered fans to improve urban comfort and
+                        environmental efficiency.
+                    </p>
+
+                    <div class="project-note">
+                        CONCEPTUAL PROPOSAL — NOT PHYSICALLY BUILT
+                    </div>
+                </article>
+
+                <article class="proj-description">
+                    <div class="project-top">
+                        <span>PROJECT / 003</span>
+                        <span class="project-type">HACKATHON CONCEPT</span>
+                    </div>
+
+                    <h3>Defend-the-box<span class="project-arrow">↗</span></h3>
+
+                    <p>
+                        Defend-the-box is a hackathon concept that gamifies
+                        real-world scam scenarios. Players manage a virtual
+                        bank account and make decisions to protect their
+                        savings from different scams. AI-powered family
+                        member consultations provide hints and generate
+                        personalised scam scenarios based on different
+                        player backgrounds.
+                    </p>
+
+                    <p>
+                        I collaborated with teammates to brainstorm the game
+                        concept and explore ways to make scam awareness more
+                        engaging and interactive.
+                    </p>
+
+                    <div class="project-tech">
+                        <span>CYBER AWARENESS</span>
+                        <span>AI CONCEPT</span>
+                        <span>IDEATION</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
     </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-main">
+            <span class="section-number">04 — GET IN TOUCH</span>
+            <h2>LET'S MAKE<br><span class="lime-text">SOMETHING.</span></h2>
+        </div>
+
+        <div class="footer-links">
+            <a href="mailto:gankylie@gmail.com">EMAIL ↗</a>
+            <a href="www.linkedin.com/in/kylie-gan-3794373a5" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a>
+            <a href="https://github.com/kylay-wow" target="_blank" rel="noopener noreferrer">GITHUB ↗</a>
+        </div>
+
+        <div class="footer-bottom">
+            <span>K.G — PERSONAL PORTFOLIO</span>
+            <span>© 2026 KYLIE. ALL RIGHTS RESERVED.</span>
+            <a href="#home">BACK TO TOP ↑</a>
+        </div>
+
+    </footer>
+
 </body>
 </html>
