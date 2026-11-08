@@ -2,7 +2,7 @@
     --bg: #171717;
     --surface: #222222;
     --surface-light: #292929;
-    --accent: #C5F36A;
+    --accent: #FF765E;
     --text: #F0F0E9;
     --secondary: #999B96;
     --border: #3A3A37;
@@ -564,6 +564,13 @@ a {
 
     .vertical-label {
         display: none;
+    }
+}
+
+@media (max-width: 700px){
+    .site-header{
+        background-color: #202328;
+        border-bottom: 1px solid var(--accent);
     }
 }
 
