@@ -1,14 +1,17 @@
-.root{
-    --bg: #F3F5F6;
-    --accent: #829BAA;
-    --text: #20272C;
-    --secondary: #34434D;
+:root{
+    --bg: #17191C;
+    --accent: #8999A6;
+    --pri_text: #E8E9E7;
+    --secondary_text: #A0A4A8;
+    --surface: #202328;
+    --border: #34383D;
 }
 
 body{
-    font-family: 'Short Stack', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--bg);
-    color: var(--text);
+    color: var(--pri_text);
+    margin: 0;
 }
 
 
@@ -17,6 +20,7 @@ body{
     margin: 20px;
     display: flex;
     align-items: center;
+    padding-bottom: 40px;
 }
 
 .nav-bar{
@@ -24,6 +28,16 @@ body{
     display: flex;
     width: fit-content;
     gap: 15px;
+}
+
+.nav-bar a{
+    color: var(--pri_text);
+    text-decoration: none;
+}
+
+.name{
+    color: var(--pri_text);
+    text-decoration: none;
 }
 
 .hero{
@@ -52,12 +66,19 @@ body{
     flex: 1;
 }
 
+.profile-pic img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
 .abt-me{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
-    padding: 20px 30px; 
+    padding: 20px 30px;
 }
 
 .abt-me h2{
@@ -69,10 +90,18 @@ body{
     max-width: 700px;
 }
 
-.skills{
+.skills-container{
     display: flex;
-    gap: 40px;
-    
+    gap: 25px;
+    justify-content: center;
+}
+
+.skills-category{
+    background-color: var(--surface);
+    border: 3px 2px var(--border);
+    padding: 25px;
+    border-radius: 16px;
+    flex: 1;
 }
 
 @media (max-width: 700px){
@@ -100,5 +129,13 @@ body{
 
     .abt-me p{
         width: 100%;
+    }
+
+    .skills-container{
+        flex-direction: column;
+    }
+
+    .profile-pic img{
+        height: 300px;
     }
 }
