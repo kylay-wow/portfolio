@@ -1,6 +1,7 @@
 const projects = [
     {
         number: "001",
+        category: "APPLICATION",
         type: "APPLICATION DEVELOPMENT",
         title: "SirApp",
         description: "SirApp is a platform designed to encourage meaningful interactions between youths and the elderly through accessible community features. I contributed to developing the community-related functions, including creating and viewing communities, and handling user interactions to support a smooth user experience.",
@@ -8,6 +9,7 @@ const projects = [
     },
     {
         number: "002",
+        category: "SUSTAINABILITY",
         type: "SUSTAINABILITY CONCEPT",
         title: "HydroLink Corridor",
         description: "HydroLink Corridor is a sustainability concept developed for the CDL-GCNS Young SDG Leaders Award 2026 as part of a four-member team. It proposes sheltered pedestrian corridors that integrate atmospheric water harvesting, greenery and solar-powered fans to improve urban comfort and environmental efficiency.",
@@ -15,6 +17,7 @@ const projects = [
     },
     {
         number: "003",
+        category: "HACKATHON",
         type: "HACKATHON CONCEPT",
         title: "Defend-the-box",
         description: "Defend-the-box is a hackathon concept that gamifies real-world scam scenarios. Players manage a virtual bank account and make decisions to protect their savings from different scams. AI-powered family member consultations provide hints and generate personalised scam scenarios based on different player backgrounds.",
@@ -60,14 +63,55 @@ function ProjectCard({ project }) {
 }
 
 function ProjectList() {
+
+    const [activeFilter, setActiveFilter] = React.useState("ALL");
+
+    const filters = [
+        "ALL",
+        "APPLICATION",
+        "SUSTAINABILITY",
+        "HACKATHON"
+    ];
+
+    const filteredProjects = activeFilter === "ALL"
+        ? projects
+        : projects.filter(
+            project => project.category === activeFilter
+        );
+
     return (
-        <div className="proj-container">
-            {projects.map((project) => (
-                <ProjectCard
-                    key={project.number}
-                    project={project}
-                />
-            ))}
+        <div>
+
+            <div className="project-filters">
+                {filters.map((filter) => (
+                    <button
+                        key={filter}
+                        className={
+                            activeFilter === filter
+                                ? "filter-btn active"
+                                : "filter-btn"
+                        }
+                        onClick={() => setActiveFilter(filter)}
+                        aria-pressed={activeFilter === filter}
+                    >
+                        {filter}
+                    </button>
+                ))}
+            </div>
+
+            <div className="proj-container">
+                {filteredProjects.map((project) => (
+                    <ProjectCard
+                        key={project.number}
+                        project={project}
+                    />
+                ))}
+            </div>
+
+            <p className="filter-count">
+                SHOWING {filteredProjects.length} / {projects.length} PROJECTS
+            </p>
+
         </div>
     );
 }
