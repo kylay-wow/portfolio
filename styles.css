@@ -546,6 +546,117 @@ a {
     text-decoration: none;
 }
 
+.project-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 12px;
+    color: var(--text);
+}
+
+.project-card h2 {
+    color: var(--accent);
+}
+
+
+/* EXPANDABLE PROJECT CARDS */
+
+.proj-description {
+    position: relative;
+    padding: 30px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.proj-description:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+/* Project title */
+.proj-description h3 {
+    font-size: clamp(25px, 4vw, 38px);
+    font-weight: 800;
+    margin: 25px 0 18px;
+    color: var(--text);
+    letter-spacing: -1.5px;
+}
+
+/* Expand button */
+.project-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 12px 16px;
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.project-toggle:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+/* Expanded content */
+.project-details {
+    margin-top: 25px;
+    padding-top: 22px;
+    border-top: 1px solid var(--border);
+    animation: reveal 0.3s ease;
+}
+
+.project-details p {
+    color: var(--secondary);
+    line-height: 1.8;
+    font-size: 14px;
+    max-width: 750px;
+}
+
+/* Technology tags */
+.project-details span {
+    display: inline-block;
+    margin: 12px 7px 0 0;
+    padding: 7px 10px;
+    border: 1px solid var(--border);
+    color: var(--accent);
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyboard accessibility */
+.project-toggle:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+    .proj-description {
+        padding: 22px;
+    }
+}
+
+
 /* RESPONSIVE */
 
 @media (max-width: 1000px) {
